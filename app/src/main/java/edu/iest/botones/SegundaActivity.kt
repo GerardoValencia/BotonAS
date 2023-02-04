@@ -8,9 +8,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 
-class SegundaActivity : AppCompatActivity(), View.OnClickListener {
+class SegundaActivity : AppCompatActivity(){
 
-    private var cambioIcono : Boolean = false
+    private var cambioIcono: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_segunda)
@@ -22,29 +22,30 @@ class SegundaActivity : AppCompatActivity(), View.OnClickListener {
 
         var bnAbrirPantalla = findViewById<Button>(R.id.bnPantalla)
         var ivLogo = findViewById<ImageView>(R.id.ivLogo)
-        /*ivLogo.setOnClickListener{
+        ivLogo.setOnClickListener {
             var arregloImagenes = arrayOf<Int>(R.drawable.anahuac, R.drawable.iest)
             if (cambioIcono) {
                 ivLogo.setImageResource(arregloImagenes[0])
-            }else {
+            } else {
                 ivLogo.setImageResource(arregloImagenes[1])
             }
             cambioIcono = !cambioIcono
-        }*/
+        }
 
-        /*bnAbrirPantalla.setOnClickListener{
-            val i = Intent(this,MainActivity::class.java)
+        bnAbrirPantalla.setOnClickListener {
+            val i = Intent(this, MainActivity::class.java)
             startActivity(i)
             finish()
-        }*/
+        }
         var bnCerrar = findViewById<Button>(R.id.bnCerrar)
-       /* bnCerrar.setOnClickListener{
+        bnCerrar.setOnClickListener {
             finish()
-        }*/
-        bnCerrar.setOnClickListener(this)
+        }
+        //bnCerrar.setOnClickListener(this)
     }
+}
 
-    override fun onClick(p0: View?) {
+    /*override fun onClick(p0: View?) {
         when(p0?.id){
             R.id.bnCerrar -> finish()
             R.id.bnPantalla -> {
@@ -52,4 +53,4 @@ class SegundaActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-}
+}*/
